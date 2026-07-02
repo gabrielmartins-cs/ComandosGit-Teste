@@ -1,0 +1,26 @@
+Passo 1: Verifique o que mudou (Opcional, mas ajuda muito)
+Para ter certeza de quais arquivos você modificou antes de salvar:
+
+git status
+Passo 02: Salve suas alterações localmente (Commit)
+Se estiver tudo certo, adicione os arquivos e crie uma nota explicando o que você fez:
+
+git add .
+git commit -m "Explique aqui o que você mudou ou consertou"
+Passo 03: Envie para o GitHub
+Agora é só mandar o seu progresso para o repositório ComandosGit-Teste:
+
+git push origin main
+(Nota: No dia a dia, você não precisa mais usar o -u no git push, apenas git push origin main basta).
+
+No final das contas, 90% do seu tempo mantendo o código vai ser repetir essa sequência curta:
+
+git pull origin main (Início do dia)
+
+Mexe no código
+
+git add .
+
+git commit -m "mensagem"
+
+git push origin main (Fim da tarefa)

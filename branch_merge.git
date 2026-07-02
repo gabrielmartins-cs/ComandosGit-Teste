@@ -1,0 +1,52 @@
+Criando uma Nova Branch e Fazendo Merge
+Imagine que você vai criar uma nova funcionalidade (por exemplo, uma página de contato). Em vez de mexer na main, você cria uma ramificação para ela.
+
+Passo 01: Criar e entrar na nova branch
+Para criar uma branch chamada nova-feature e já mudar para ela:
+
+ 
+git checkout -b nova-feature
+(Dica: A partir de agora, tudo o que você fizer no código estará "salvo" apenas nessa ramificação segura).
+
+Passo 02: Trabalhar e commitar normalmente
+Altere os seus arquivos no VS Code e salve os commits dentro da sua branch:
+
+git add .
+git commit -m "Adiciona estrutura da página de contato"
+Passo 03: Enviar a nova branch para o GitHub (Opcional)
+Se você quiser que outras pessoas vejam a sua branch no seu repositório ComandosGit-Teste, você faz o push dela:
+
+ 
+git push origin nova-feature
+Quando sua funcionalidade estiver pronta e testada, é hora de jogá-la para dentro da main.
+
+Passo 04: Voltar para a branch main
+Você precisa estar posicionado na branch que vai receber as atualizações:
+
+ 
+git checkout main
+Passo 05: Trazer as alterações da sua branch (Merge)
+Agora, você puxa as alterações da nova-feature para dentro da main:
+
+ 
+git merge nova-feature
+Passo 06: Atualizar o GitHub
+Como o merge aconteceu apenas no seu computador, o último passo é atualizar o GitHub:
+
+ 
+git push origin main
+Passo 07: Limpeza (Opcional)
+Agora que a funcionalidade já está na main, você pode apagar a branch antiga para não acumular lixo:
+
+ 
+git branch -d nova-feature
+💡 Resumo Visual do Fluxo:
+git checkout -b minha-branch ➡️ (Cria e entra)
+
+Alterou o código? ➡️ git add . e git commit -m "..."
+
+git checkout main ➡️ (Volta para a principal)
+
+git merge minha-branch ➡️ (Junta as duas localmente)
+
+git push origin main ➡️ (Envia para o GitHub)

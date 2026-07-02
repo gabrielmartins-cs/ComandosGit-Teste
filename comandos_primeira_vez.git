@@ -1,0 +1,43 @@
+Guia Rápido de Comandos Git
+Passo 01: Iniciar o Repositório Local
+Crie uma pasta nova no computador, abra o terminal nela e execute:
+
+ 
+git init
+Passo 02: Salvar as Alterações Localmente (Commit)
+Adicione os arquivos ao "carrinho" do Git e grave o seu primeiro histórico:
+
+ 
+git add .
+git commit -m "Primeiro commit"
+Passo 03: Mudar o nome da Branch para o padrão atual
+Garante que sua ramificação local se chame main (igual ao GitHub):
+
+ 
+git branch -M main
+Passo 04: Conectar com o GitHub (Escolha UMA das opções abaixo)
+Opção A: Se for a primeira vez adicionando a origem:
+
+ 
+git remote add origin https://github.com/gabrielmartins-cs/ComandosGit-Teste.git
+Opção B: Se o 'origin' já existir e você só quiser trocar o link:
+
+ 
+git remote set-url origin https://github.com/gabrielmartins-cs/ComandosGit-Teste.git
+Opção C: Se quiser apagar a origem antiga e adicionar a nova do zero:
+
+ 
+git remote remove origin
+git remote add origin https://github.com/gabrielmartins-cs/ComandosGit-Teste.git
+Opção D: Se quiser usar um nome personalizado em vez de 'origin':
+
+ 
+git remote add github https://github.com/gabrielmartins-cs/ComandosGit-Teste.git
+Passo 05: Sincronizar e Enviar
+Se o repositório no GitHub já tiver arquivos (como um README.md criado lá pelo site), sincronize os históricos primeiro:
+
+git pull origin main --allow-unrelated-histories
+Por fim, envie os seus arquivos para o GitHub:
+ 
+git push -u origin main
+(Nota: Se você usou a Opção D no passo anterior, mude origin para github na hora de fazer o pull e o push).
